@@ -20,7 +20,6 @@ function App() {
   };
 
   const handleRelatedClick = (movieId) => {
-    console.log(movieId);
     setRelated(true);
     setMovieId(movieId);
   };

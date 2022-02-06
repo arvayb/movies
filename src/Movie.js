@@ -21,7 +21,7 @@ function Movie(props) {
     return genre.name;
   });
   return (
-    <Card className="movie-card">
+    <Card>
       <span className="clickable movie-name" onClick={handleNameClick}>
         {props.name}
       </span>

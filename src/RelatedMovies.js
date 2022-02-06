@@ -24,17 +24,13 @@ function RelatedMovies(props) {
   const { loading, error, data } = useQuery(GET_RELATED_MOVIES, {
     variables: { movieId: props.movieId },
   });
-  console.log(data);
 
   if (loading) {
     return <CircularProgress />;
   }
   if (error && props.movieId !== "") {
-    console.log(error);
     return <div>Error!</div>;
   }
-
-  console.log(data);
 
   return (
     <Grid container spacing={2}>

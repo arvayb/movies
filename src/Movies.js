@@ -22,17 +22,13 @@ function Movies(props) {
   const { loading, error, data } = useQuery(GET_MOVIES, {
     variables: { title: props.title },
   });
-  console.log(data);
 
   if (loading) {
     return <CircularProgress />;
   }
   if (error && props.title !== "") {
-    console.log(error);
     return <div>Error!</div>;
   }
-
-  console.log(data);
 
   return (
     <Grid container spacing={2}>

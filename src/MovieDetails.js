@@ -16,7 +16,6 @@ function MovieDetails(props) {
   }, [props.query]);
 
   const handleWikiApiResponse = (response) => {
-    console.log(response);
     if (response.extract) {
       setSummary(response.extract);
       setWikipediaLink(response.content_urls.desktop.page);
